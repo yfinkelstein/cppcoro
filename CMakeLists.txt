@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.8.2)
 #override via command line, for instance: cmake -DLLVM_HOME=/Library/Developer/CommandLineTools/usr
 #set(LLVM_HOME /usr/local/opt/llvm CACHE PATH "path to LLVM distribution")
 #set(CMAKE_CXX_COMPILER ${LLVM_HOME}/bin/clang++)
-set(CMAKE_C_COMPILER ${LLVM_HOME}/bin/clang)
+#set(CMAKE_C_COMPILER ${LLVM_HOME}/bin/clang)
 
 
 set(CMAKE_DEBUG_TARGET_PROPERTIES
