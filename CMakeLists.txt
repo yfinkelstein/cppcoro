@@ -6,7 +6,6 @@ cmake_minimum_required(VERSION 3.8.2)
 #set(CMAKE_CXX_COMPILER ${LLVM_HOME}/bin/clang++)
 #set(CMAKE_C_COMPILER ${LLVM_HOME}/bin/clang)
 
-
 set(CMAKE_DEBUG_TARGET_PROPERTIES
         INCLUDE_DIRECTORIES
         COMPILE_DEFINITIONS
@@ -39,5 +38,8 @@ add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
 
 add_subdirectory(test)
 
+install(DIRECTORY include/cppcoro DESTINATION include)
+install(TARGETS ${PROJECT_NAME}
+        ARCHIVE DESTINATION lib)
 
 #enable_testing()
