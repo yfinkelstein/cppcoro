@@ -1,6 +1,8 @@
 
 project(cppcoro_tests)
 
+get_target_property(parent_libs cppcoro LINK_LIBRARIES)
+
 set(SRC_FILES main.cpp
         counted.cpp
         generator_tests.cpp
@@ -19,4 +21,4 @@ set(SRC_FILES main.cpp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/doctest)
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
-target_link_libraries(${PROJECT_NAME} cppcoro)
+target_link_libraries(${PROJECT_NAME} cppcoro ${parent_libs})
