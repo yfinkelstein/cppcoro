@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8.2)
+cmake_minimum_required(VERSION 3.2.0)
 
 
 #override via command line, for instance: cmake -DLLVM_HOME=/Library/Developer/CommandLineTools/usr
