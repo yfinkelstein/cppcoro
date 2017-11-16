@@ -1,7 +1,6 @@
 
 project(cppcoro_tests)
-get_target_property(compile_defs cppcoro COMPILE_DEFINITIONS)
-set_target_properties(cppcoro_tests PROPERTIES COMPILE_DEFINITIONS ${compile_defs})
+get_target_property(compile_flags cppcoro COMPILE_FLAGS)
 
 set(SRC_FILES main.cpp
         counted.cpp
@@ -21,4 +20,5 @@ set(SRC_FILES main.cpp
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/doctest)
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
+set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS ${compile_flags})
 target_link_libraries(${PROJECT_NAME} cppcoro)
