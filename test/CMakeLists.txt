@@ -1,7 +1,7 @@
 
 project(cppcoro_tests)
 get_target_property(compile_defs cppcoro COMPILE_DEFINITIONS)
-set_target_properties(cppcoro_tests PROPERTIES COMPILE_DEFINITIONS ${COMPILE_DEFINITIONS})
+set_target_properties(cppcoro_tests PROPERTIES COMPILE_DEFINITIONS ${compile_defs})
 
 set(SRC_FILES main.cpp
         counted.cpp
